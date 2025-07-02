@@ -1,0 +1,17 @@
+{
+  "name": "discord-bot",
+  "version": "1.0.0",
+  "description": "Multi-guild Discord bot with XP, Twitter feed, and module toggles",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "discord.js": "^14.13.0",
+    "mongoose": "^7.0.0",
+    "dotenv": "^16.0.0",
+    "axios": "^1.4.0",
+    "node-cron": "^3.0.2"
+  }
+} 

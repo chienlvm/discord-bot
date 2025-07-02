@@ -1,0 +1,135 @@
+# .cursorrules
+# Cursor rules for fullstack monorepo project: bot (Node.js), client (React), server (Node.js)
+# Áp dụng guideline: DRY, modularity, security, performance, modern ES features
+
+[global]
+name = "MyFullstackProject"
+version = "1.0.0"
+description = "Cursor rules for bot, client, server following modern ES, DRY and security best practices"
+author = "YourTeam"
+
+##############################################################################
+# 🧩 BOT - Node.js (ES Module)
+##############################################################################
+[bot]
+language = "nodejs"
+module = "esmodule"
+framework = "" # Không dùng framework cụ thể
+libraries = [] # Có thể bổ sung nếu bot dùng thêm lib
+
+guideline = """
+- Follow ES Module best practices
+- Prioritize modularity, DRY, performance, and security
+- Use latest ES features, top-level await
+- Keep code concise (V1)
+"""
+
+rules = [
+  # ES module rules (từ awesome-cursorrules)
+  "use-import-export-instead-of-require",
+  "top-level-await",
+  "use-mjs-extension-or-type-module",
+  "no-commonjs-exports",
+  # Coding best practices
+  "use-strict-mode",
+  "prefer-async-await",
+  "no-console-in-production",
+  "consistent-imports",
+  "no-var",
+  "prefer-const",
+  "error-handling-best-practices",
+  # DRY & modularity
+  "modular-structure",
+  "avoid-duplicate-code"
+]
+
+##############################################################################
+# ⚛️ CLIENT - React (Vite + react-router-dom)
+##############################################################################
+[client]
+language = "javascript"
+framework = "react"
+build-tool = "vite"
+router = "react-router-dom"
+
+guideline = """
+- Use function components and hooks
+- Prioritize maintainability, modularity, and performance
+- Keep components small and focused
+"""
+
+rules = [
+  "use-function-components",
+  "prefer-hooks",
+  "no-inline-styles",
+  "use-prop-types-or-typescript",
+  "consistent-folder-structure",
+  "avoid-index-as-key",
+  "limit-component-depth",
+  "import-aliases"
+]
+
+##############################################################################
+# 🛡️ SERVER - Node.js (ES Module + express, mongoose, jsonwebtoken)
+##############################################################################
+[server]
+language = "nodejs"
+module = "esmodule"
+libraries = ["express", "jsonwebtoken", "mongoose"]
+
+guideline = """
+## General
+- Follow best practices, lean towards agile methodologies
+- Prioritize modularity, DRY, performance, and security
+- First break tasks into distinct prioritized steps, then follow the steps
+- Prioritize tasks/steps you’ll address in each response
+- Don't repeat yourself
+- Keep responses very short, unless I include a Vx value:
+  - V0 default, code golf
+  - V1 concise
+  - V2 simple
+  - V3 verbose, DRY with extracted functions
+
+## Code
+
+- Use ES module syntax
+- Where appropriate suggest refactorings and code improvements
+- Favor using the latest ES and nodejs features
+- Don’t apologize for errors: fix them
+  * If you can’t finish code, add TODO: comments
+## Comments
+
+- Comments should be created where the operation isn't clear from the code, or where uncommon libraries are used
+- Code must start with path/filename as a one-line comment
+- Comments should describe purpose, not effect
+"""
+
+rules = [
+  # ES module rules
+  "use-import-export-instead-of-require",
+  "top-level-await",
+  "use-mjs-extension-or-type-module",
+  "no-commonjs-exports",
+  # Coding best practices
+  "use-strict-mode",
+  "prefer-async-await",
+  "no-console-in-production",
+  "consistent-imports",
+  "prefer-const",
+  "error-handling-best-practices",
+  # Security
+  "validate-request-body",
+  "sanitize-inputs",
+  "use-env-variables",
+  # DRY & modularity
+  "modular-structure",
+  "avoid-duplicate-code"
+]
+
+##############################################################################
+# 📦 IMPORT / EXTEND (nếu muốn kế thừa rule ngoài)
+# [import]
+# files = [
+#   "https://raw.githubusercontent.com/PatrickJS/awesome-cursorrules/main/rules/es-module-nodejs-guidelines-cursorrules-prompt-fil/.cursorrules"
+# ]
+##############################################################################
